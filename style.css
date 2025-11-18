@@ -1,0 +1,257 @@
+/* 🔥 DEIXAR TODO FUNDO PRETO + TEXTO BRANCO */
+* {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* ------ GERAL ------ */
+.card {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    background: #000000 !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .animated-bg {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(270deg, #000000, #0a0a30, #1a1a50, #000000);
+    background-size: 800% 800%;
+    animation: gradientMove 30s ease infinite;
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .content {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* 🔥 ANIMAÇÃO DO FUNDO – opcional, se quiser manter o degradê é só tirar o !important acima */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Centraliza tudo como um Linktree */
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* ------ HEADER E AVATAR ------ */
+.header {
+    width: 100%;
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 15px #ffffff55;
+
+    animation: floatAvatar 4s ease-in-out infinite;
+}
+
+@keyframes floatAvatar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* ------ TEXTOS ------ */
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 12px;
+    text-shadow: 0 0 6px #ffffff88;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 1;
+    text-align: center;
+}
+.subtitle1{
+    font-size: 1.4rem;
+    opacity: 0.85;
+    text-align: center;
+}
+
+.bio {
+    font-size: 1rem;
+    margin-top: 5px;
+    line-height: 1.;
+    opacity: 1,0;
+    text-align: center;
+}
+
+/* ------ ÍCONES ------ */
+.social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-icons img {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2) rotate(4deg);
+    box-shadow: 0 0 12px #ffffff77;
+}
+
+/* ------ LINKS ------ */
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.btn {
+    width: 100%;
+    background: #111111 !important;
+    color: #ffffff !important;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+
+    border: 1px solid #ffffff55;
+    backdrop-filter: blur(8px);
+
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: #222222 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px #ffffff66;
+}
+
+/* ------ LIVROS ------ */
+.books {
+    width: 100%;
+    height: 505vh;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.book {
+    text-decoration: none;
+    width: 100%;
+    height: 50vh;
+    border-radius: 14px;
+    padding: 10px;
+    border: 1px solid #ffffff33;
+    backdrop-filter: blur(6px);
+
+  
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    transition: 0.3s ease;
+}
+
+.book:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 0 18px #ffffff55;
+}
+
+.book img {
+    width: 100%;
+    height: 120vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Títulos */
+.btitle {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    text-shadow: 0 0 6px #ffffff33;
+}
+
+.small {
+    font-size:18px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 480px) {
+    .book img {
+        height: 32vh;
+    }
+
+    .books {
+    width: 100%;
+    height: 55vh;
+    }
+    .small {
+    font-size:15px;
+    text-decoration: none;
+    opacity: 0.8;
+    text-align: center;}
+    
+    .btitle {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    text-shadow: 0 0 6px #ffffff33;}
+
+}

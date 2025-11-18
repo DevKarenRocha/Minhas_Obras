@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Galeria de Imagens - Livro </title>
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+background: #000; /* fundo escuro para destacar imagens */
+color: #fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+h1 {
+text-align: center;
+margin: 20px 0;
+}
+
+
+.galeria {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 15px;
+width: 90%;
+max-width: 1200px;
+padding-bottom: 40px;
+}
+
+
+.galeria img {
+width: 100%;
+height: auto; /* adapta ao formato da imagem */
+object-fit: cover;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+transition: 0.3s ease;
+}
+
+
+.galeria img:hover {
+transform: scale(1.03);
+box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+</style>
+</head>
+<body>
+<h1>Imagens & Referências do Livro - O CORAÇÃO DO VENDAVEL</h1>
+
+
+<div class="galeria">
+<!-- Substitua os src pelas imagens reais -->
+<img src="img/ChatGPT Image 11 de nov. de 2025, 07_16_28.png" alt="Imagem 1" />
+<img src="img/ChatGPT Image 11 de nov. de 2025, 19_33_40.png" alt="Imagem 2" />
+<img src="img/ChatGPT Image 16 de nov. de 2025, 10_19_07.png" alt="Imagem 3" />
+<img src="img/ChatGPT Image 18 de nov. de 2025, 15_26_38.png" alt="Imagem 4" />
+<img src="img/ChatGPT Image 16 de nov. de 2025, 10_24_47.png" alt="Imagem 5" />
+
+</div>
+</body>
+</html>
