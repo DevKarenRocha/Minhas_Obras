@@ -156,7 +156,7 @@ body {
 }
 
 .book img {
-    width: 100%;
+    width: 23vw;
     height: 70vh;
     aspect-ratio: 3 / 4;      /* Proporção perfeita */
     object-fit: cover;
@@ -210,33 +210,44 @@ body {
 }
 
 /* =========================================================
-   RESPONSIVIDADE – CELULAR (3 capas sempre lado a lado)
+   RESPONSIVIDADE – CELULAR (3 capas maiores)
 ========================================================= */
 @media (max-width: 480px) {
 
-    /* Sempre manter 3 livros na mesma linha */
+    /* Mantém 3 lados a lado */
     .books {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px; /* menor espaço para dar mais foco às capas */
     }
 
-    /* Capas completamente responsivas */
+    /* 📌 CAPAS MAIORES EM CELULAR */
     .book img {
-        width: 100%;
-        height: 20vh;
+        width: 40vw;
+        height: 30vh;       /* AUMENTADO de 20vh → 28vh */
         aspect-ratio: 3 / 4;
         object-fit: cover;
+        border-radius: 10px;
     }
 
-    /* Ajustes finos de texto */
+    /* 📌 MENOS ESPAÇO NOS TEXTOS */
+    .book {
+        gap: 6px; /* diminui o espaço entre capa e textos */
+        padding: 6px; /* mais compacto */
+    }
+
+    /* 📌 TÍTULO MENOR */
     .btitle {
-        font-size: 0.80rem;
-        text-align: center;   /* 🔥 Centralizado */
+        font-size: 1.1rem;  /* diminuiu */
+        line-height: 1.1;
+        text-align: center;
     }
 
+    /* 📌 SUBTÍTULO AINDA MENOR */
     .small {
-        font-size: 12px;
-        text-align: center;   /* 🔥 Centralizado */
+        font-size: 0.5rem;     /* diminuiu */
+        opacity: 0.75;
+        line-height: 1.1;
+        text-align: center;
     }
 }
 
